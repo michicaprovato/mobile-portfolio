@@ -520,9 +520,8 @@ figure.ph:active{transform:scale(.97)}
     var t = THEMES[o.t];
     var fi = 0;
     el.addEventListener('scroll', function () {
-      var fig = el.firstElementChild;
-      var step = fig ? fig.getBoundingClientRect().width + 16 : 216;
-      var i = Math.min(o.phones.length - 1, Math.round(el.scrollLeft / step));
+      var max = el.scrollWidth - el.clientWidth;
+      var i = max > 0 ? Math.round(el.scrollLeft / max * (o.phones.length - 1)) : 0;
       if (i !== fi) {
         fi = i;
         label.textContent = o.caps[fi];
