@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Four stories - Michica Provato</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23008471'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Georgia,serif' font-size='30' fill='%23f9f6ef'%3EM%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&family=Raleway:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Nunito+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* Mallorca tokens */
+  --cream:#f9f6ef; --ink:#14342e; --body:#33453e; --body-muted:#4a5a54; --caption-fg:#7d8a83;
+  --terracotta:#c45f3f; --teal:#008471; --mustard:#d6d35f; --pink:#f29cc3;
+  --band-dark:#2f4a3c; --band-sage:#dce8dd;
+  --tint-blush:#ffc0c0; --tint-periwinkle:#dcdff0; --tint-sand:#f2e4c9;
+  --hairline:#e2dcc0;
+  --on-dark:#eaf6f1; --on-dark-soft:#cfded7; --on-dark-faint:rgba(249,246,239,.3); --on-dark-muted:rgba(249,246,239,.7);
+  --font-display:'Josefin Sans',sans-serif; --font-body:'Raleway',sans-serif; --font-serif:'Cormorant Garamond',serif;
+  --track-wordmark:0.3em;
+  --shadow-offset-mustard:4px 3px 0 rgba(214,211,95,.8);
+  --shadow-block-mustard:10px 10px 0 rgba(214,211,95,.55);
+  --shadow-photo:6px 6px 0 rgba(214,211,95,.7);
+  --shadow-photo-pink:12px 12px 0 rgba(242,156,195,.6);
+  --shadow-btn-send:4px 4px 0 var(--pink);
+  /* QB Mobile tokens (subset used by the phone mockups) */
+  --qb-font-family:"AvenirNext forINTUIT","Avenir Next","Nunito Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --qb-ui-primary:rgb(44,160,28); --qb-ui-positive:rgb(16,128,0); --qb-ui-negative:rgb(213,43,30); --qb-ui-attention:rgb(255,106,0); --qb-ui-info:rgb(0,119,197);
+  --qb-action-standard:rgb(44,160,28);
+  --qb-text-primary:rgb(57,58,61); --qb-text-secondary:rgb(107,108,114); --qb-text-tertiary:rgb(141,144,150);
+  --qb-icon-secondary:rgb(107,108,114);
+  --qb-page-bg-secondary:rgb(236,238,241);
+  --qb-container-bg-accent:rgb(244,245,248); --qb-container-bg-positive:rgb(230,244,228); --qb-container-bg-negative:rgb(255,243,242); --qb-container-bg-attention:rgb(255,247,239);
+  --qb-container-border-tertiary:rgb(212,215,220);
+  --qb-divider-secondary:rgb(186,190,197); --qb-divider-tertiary:rgb(212,215,220);
+}
+@font-face{font-family:"AvenirNext forINTUIT";font-weight:400;font-style:normal;src:local("Avenir Next Regular"),local("AvenirNext-Regular"),local("Nunito Sans Regular"),local("NunitoSans-Regular")}
+@font-face{font-family:"AvenirNext forINTUIT";font-weight:500;font-style:normal;src:local("Avenir Next Medium"),local("AvenirNext-Medium"),local("Nunito Sans Medium"),local("NunitoSans-Medium")}
+@font-face{font-family:"AvenirNext forINTUIT";font-weight:600;font-style:normal;src:local("Avenir Next Demi Bold"),local("AvenirNext-DemiBold"),local("Nunito Sans SemiBold"),local("NunitoSans-SemiBold")}
+@font-face{font-family:"AvenirNext forINTUIT";font-weight:700;font-style:normal;src:local("Avenir Next Bold"),local("AvenirNext-Bold"),local("Nunito Sans Bold"),local("NunitoSans-Bold")}
+
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;background:#ece7d9;overflow:hidden}
+body{font-family:var(--font-body);-webkit-font-smoothing:antialiased}
+a{color:var(--terracotta);text-decoration:none}
+img{display:block;max-width:100%}
+.grain{position:fixed;inset:0;pointer-events:none;z-index:90;opacity:.45;background-image:url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22300%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%22.9%22 numOctaves=%222%22/%3E%3CfeColorMatrix type=%22saturate%22 values=%220%22/%3E%3C/filter%3E%3Crect width=%22300%22 height=%22300%22 filter=%22url(%23n)%22 opacity=%22.16%22/%3E%3C/svg%3E')}
+.shot{border-radius:10px 10px 0 0;box-shadow:var(--shadow-block-mustard)}
+.headshot{border-radius:50%;object-fit:cover;box-shadow:var(--shadow-photo)}
+.send-btn{background:var(--mustard);color:var(--ink);font-family:var(--font-body);font-weight:600;font-size:13px;letter-spacing:.2em;text-transform:uppercase;border:none;border-radius:0;cursor:pointer;box-shadow:var(--shadow-btn-send)}
+.m-snap{scrollbar-width:none}
+.m-snap::-webkit-scrollbar{display:none}
+
+@keyframes settleL{from{transform:translateX(440px)}to{transform:translateX(0)}}
+@keyframes settleR{from{transform:translateX(-120%)}to{transform:translateX(0)}}
+@keyframes ghostOut{0%{opacity:.5}60%{opacity:.4}100%{opacity:0}}
+@keyframes shadowTight{from{text-shadow:0 0 0 rgba(20,52,46,0)}to{text-shadow:2px 2px 0 rgba(20,52,46,.5)}}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@keyframes peek{from{transform:translateY(60%)}to{transform:translateY(0)}}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(5px)}}
+@keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fillX{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes growX{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes growY{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+@keyframes pop{from{transform:scale(.6);opacity:0}to{transform:scale(1);opacity:1}}
+
+/* Scroll-driven entry animations (screens rise in as they enter the viewport) */
+@supports (animation-timeline: view()) {
+  .a-e{animation:rise 1s both;animation-timeline:view();animation-range:entry 10% entry 60%}
+  .a-t{animation:rise 1s both;animation-timeline:view();animation-range:entry 20% entry 70%}
+  .a-b{animation:rise 1s both;animation-timeline:view();animation-range:entry 30% entry 80%}
+  .a-n{animation:rise 1s both;animation-timeline:view();animation-range:entry 40% entry 90%}
+  .a-s{animation:rise 1s both;animation-timeline:view();animation-range:entry 45% entry 100%}
+  .a-c{animation:rise 1s both;animation-timeline:view();animation-range:entry 30% entry 100%}
+  .a-peek{animation:peek 1s both;animation-timeline:view();animation-range:entry 0% entry 60%}
+}
+
+/* Wake animations inside the active screen's phone mockups */
+.awake .wk-rise{animation:rise .6s cubic-bezier(.2,.8,.2,1) .2s both}
+.awake .wk-x{animation:growX .9s cubic-bezier(.2,.8,.2,1) .25s both}
+.awake .wk-x2{animation:growX .9s cubic-bezier(.2,.8,.2,1) .4s both}
+.awake .wk-y{animation:growY .8s cubic-bezier(.2,.8,.2,1) .3s both}
+.awake .wk-pop{animation:pop .7s cubic-bezier(.2,.8,.2,1) .3s both}
+
+#nextBtn{animation:bob 1.6s ease-in-out infinite;transition:transform .12s,box-shadow .12s}
+#nextBtn:active{transform:scale(.92);box-shadow:2px 2px 0 var(--mustard)!important}
+figure.ph:active{transform:scale(.97)}
+
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div id="deck" style="position:relative;max-width:480px;height:100vh;height:100dvh;margin:0 auto;background:var(--cream);color:var(--ink);font-family:var(--font-body);overflow:hidden">
+  <div class="grain"></div>
+
+  <div id="topbar" style="position:absolute;top:0;left:0;right:0;z-index:40;background:var(--teal);color:var(--cream);transition:background .3s">
+    <div style="display:flex;justify-content:space-between;align-items:center;height:52px;padding:0 20px">
+      <button id="homeBtn" style="border:0;background:none;padding:0;min-height:44px;font-family:var(--font-display);font-weight:400;font-size:12px;letter-spacing:var(--track-wordmark);text-transform:uppercase;color:inherit;cursor:pointer">Michica Provato</button>
+      <button id="talkBtn" style="border:0;background:none;padding:0;min-height:44px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--pink);cursor:pointer;white-space:nowrap">talk &rarr;</button>
+    </div>
+    <div id="segs" style="display:flex;gap:4px;padding:0 20px 10px"></div>
+    <div style="display:flex;justify-content:space-between;padding:0 20px 10px;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(249,246,239,.7)" id="chRow">
+      <span id="chLabel">home</span><span id="chCount"></span>
+    </div>
+  </div>
+
+  <div id="scroller" class="m-snap" style="height:100%;overflow-y:auto;scroll-snap-type:y mandatory;overscroll-behavior:contain;scroll-timeline-name:--page;scroll-timeline-axis:block">
+
+    <!-- HOME -->
+    <section id="home" style="height:100%;scroll-snap-align:start;background:var(--teal);color:var(--cream);padding:96px 24px 90px;display:flex;flex-direction:column;justify-content:flex-end;gap:22px;overflow:hidden">
+      <div style="font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--pink);animation:fade .6s .1s both">design leader &middot; toronto</div>
+      <div style="display:flex;flex-direction:column;gap:12px;font-family:var(--font-display);font-weight:300;font-size:29px;line-height:1.05;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap">
+        <div style="position:relative;display:inline-block;width:max-content;animation:settleL 2.2s cubic-bezier(.1,.8,.15,1) .2s both"><span style="position:absolute;right:100%;padding-right:.6em;animation:ghostOut 2.2s .2s both">Design with intent. Design with intent.</span><span style="display:inline-block;animation:shadowTight .2s steps(1) 2.4s both">Design with intent.</span></div>
+        <div style="position:relative;display:inline-block;width:max-content;color:var(--mustard);animation:settleR 2.6s cubic-bezier(.1,.8,.15,1) .2s both"><span style="display:inline-block;animation:shadowTight .2s steps(1) 2.8s both">Lead with heart.</span><span style="position:absolute;left:100%;padding-left:.6em;animation:ghostOut 2.6s .2s both">Lead with heart. Lead with heart.</span></div>
+        <div style="position:relative;display:inline-block;width:max-content;color:var(--pink);animation:settleL 3s cubic-bezier(.1,.8,.15,1) .2s both"><span style="position:absolute;right:100%;padding-right:.6em;animation:ghostOut 3s .2s both">Scale with clarity. Scale with clarity.</span><span style="display:inline-block;animation:shadowTight .2s steps(1) 3.2s both">Scale with clarity.</span></div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:14px;animation:fade .6s 3.4s both">
+        <div style="width:84px;height:4px;background:var(--mustard);box-shadow:5px 4px 0 var(--pink)"></div>
+        <p style="margin:0;font-family:var(--font-serif);font-style:italic;font-size:20px;line-height:1.35;color:var(--on-dark)">Four stories. Five minutes. Made for the phone in your hand.</p>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(249,246,239,.4);padding-top:14px;animation:fade .6s 3.7s both">
+        <span style="font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--mustard)">01 alaska &middot; 02 amazon &middot; 03 leading &middot; 04 global</span>
+        <span style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(249,246,239,.7)">swipe &uarr;</span>
+      </div>
+    </section>
+
+    <!-- TALK -->
+    <section id="talk" style="height:100%;scroll-snap-align:start;background:var(--band-dark);color:var(--cream);padding:96px 24px 90px;display:flex;flex-direction:column;justify-content:center;gap:16px">
+      <div style="display:flex;align-items:center;gap:14px"><img src="assets/photo-michica-400.webp" alt="Michica Provato" class="headshot" style="width:44px;height:44px"><span style="font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--mustard)">let's talk</span></div>
+      <h2 style="margin:0;font-family:var(--font-display);font-weight:300;font-size:28px;line-height:1.12;letter-spacing:.06em;text-transform:uppercase;text-shadow:2px 2px 0 var(--terracotta)">Let's talk about what comes next</h2>
+      <p style="margin:0;font-family:var(--font-serif);font-style:italic;font-size:20px;line-height:1.35;color:var(--on-dark-soft)">If you're taking a product into new markets, this is the work I want to do next.</p>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <a href="mailto:michicamedia@gmail.com" class="send-btn" data-goatcounter-click="mobile-email" style="display:flex;justify-content:space-between;align-items:center;min-height:52px;padding:15px 22px;color:var(--ink)">Email me<span>&rarr;</span></a>
+        <a href="https://linkedin.com/in/michica" target="_blank" rel="noopener" data-goatcounter-click="mobile-linkedin" style="display:flex;justify-content:space-between;align-items:center;min-height:52px;padding:15px 22px;border:1px solid var(--cream);color:var(--cream);font-size:13px;letter-spacing:.2em;text-transform:uppercase;font-weight:600">LinkedIn<span>&rarr;</span></a>
+        <a href="https://michicaprovato.github.io" target="_blank" rel="noopener" data-goatcounter-click="mobile-more-cases" style="display:flex;justify-content:space-between;align-items:center;min-height:52px;padding:15px 22px;border:1px solid var(--cream);color:var(--cream);font-size:13px;letter-spacing:.2em;text-transform:uppercase;font-weight:600">More case studies<span>&rarr;</span></a>
+      </div>
+    </section>
+  </div>
+
+  <button id="nextBtn" aria-label="Next" style="position:absolute;right:20px;bottom:calc(20px + env(safe-area-inset-bottom));z-index:40;width:52px;height:52px;border-radius:50%;border:1.5px solid var(--ink);background:var(--cream);color:var(--ink);font-size:20px;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:4px 4px 0 var(--mustard)">&darr;</button>
+</div>
+
+<script>
+(function () {
+  'use strict';
+
+  /* ---------- content: source of truth from the design handoff ---------- */
+  var DATA = [
+    // 01 - Alaska
+    { id: 'alaska', t: 'teal', big: true, eyebrow: '01 · craft · intuit assist', title: 'Project Alaska', body: 'Email in. Invoice out.', note: 'A hackathon idea that became Intuit Assist’s flagship AI workflow.', phones: ['inbox'], mode: 'crest', phoneH: '36%' },
+    { id: 'alaska-2', t: 'sage', eyebrow: 'the problem', title: 'Invoices are still typed by hand.', body: 'The order arrives by email. Every line gets retyped into a blank form.', phones: ['email', 'blank'], mode: 'crest', phoneH: '38%' },
+    { id: 'alaska-3', t: 'cream', eyebrow: 'the bet', title: 'What if forwarding was enough?', body: 'Owners will take a drafted invoice over a blank one, even when the AI isn’t perfect.', stats: [{ n: '10 of 10', l: 'customers in the first round said yes' }] },
+    { id: 'alaska-4', t: 'sage', eyebrow: 'the experience · swipe', title: 'Draft it. Never send it.', mode: 'carousel', phones: ['inbox', 'working', 'draft', 'split', 'sheet', 'sent'], caps: ['Forward, or tap from the inbox', 'Assist shows its work', 'A draft, with the mismatch flagged', 'Email beside invoice, for one thumb', 'Fix a line without leaving', 'Sent. Under a minute, standing up.'] },
+    { id: 'alaska-5', t: 'cream', eyebrow: 'how i led it', title: 'Scope small. Test early. Hand off clean.', stats: [{ n: '10 → 20', l: 'customers through Alpha into Beta' }, { n: '3', l: 'principles the team designed against' }, { n: '1', l: 'clean handoff into the Assist roadmap' }] },
+    { id: 'alaska-6', t: 'dark', eyebrow: 'outcome', title: 'A flagship, and a patent.', body: '“Reviewing an invoice is far easier than creating one.” That sentence is the whole product.', stats: [{ n: '1', l: 'patent filed' }, { n: '1st', l: 'AI use case shown at Intuit Assist launch' }] },
+    // 02 - Amazon
+    { id: 'amazon', t: 'teal', big: true, eyebrow: '02 · vision · amazon × intuit', title: 'Amazon × Intuit', body: 'QuickBooks, inside Seller Central.', note: 'The first time QuickBooks ever lived inside another company’s platform.', phones: ['home'], mode: 'crest', phoneH: '36%' },
+    { id: 'amazon-2', t: 'peri', eyebrow: 'the problem', title: 'Sellers know their sales. Not their profit.', body: '“I spend too much time aggregating data instead of focusing on growth.”', attr: 'an amazon seller, in research', visual: 'desk' },
+    { id: 'amazon-3', t: 'cream', eyebrow: 'the move', title: 'A prototype, not a pitch deck.', body: 'Two companies, no shared picture of the partnership. So my team built one you could hold.', visual: 'img' },
+    { id: 'amazon-4', t: 'peri', eyebrow: 'the experience · swipe', title: 'Profit at a glance, on the seller app.', mode: 'carousel', phones: ['home', 'pnl', 'donut', 'cash', 'review', 'tax'], caps: ['QuickBooks lives on the seller’s home', 'Profit in one number, not a spreadsheet', 'Fees and ads, next to cost of goods', 'Cash flow that knows the payout calendar', 'Settlements split themselves', 'Tax, funded a payout at a time'] },
+    { id: 'amazon-5', t: 'sand', eyebrow: 'in the room', title: '“Absolutely critical to landing the contract.”', body: 'Both leadership teams passed the phone around and pointed to it as the picture of the partnership.', attr: 'vp of product · intuit' },
+    { id: 'amazon-6', t: 'dark', eyebrow: 'outcome', title: 'Announced December 2024.', stats: [{ n: '1st', l: 'QuickBooks embedded in a third-party platform' }, { n: 'Millions', l: 'of US sellers in the rollout' }, { n: '1', l: 'repeatable model for future partnerships' }] },
+    // 03 - Leading
+    { id: 'leading', t: 'teal', big: true, eyebrow: '03 · culture · design leadership', title: 'Leading teams through change', body: 'Four rebuilds. One system.', note: 'Five years, four cities, three continents. Delivery never paused.' },
+    { id: 'leading-2', t: 'sand', eyebrow: 'the system', title: 'A loop, not a checklist.', visual: 'loop' },
+    { id: 'leading-3', t: 'cream', eyebrow: 'canada · fy21 to 23', title: 'Name the fear first.', body: 'Eight designers lost their partners overnight. I started with hopes and fears, not an org chart.', note: 'Then told the org our first model wasn’t working, and changed it.' },
+    { id: 'leading-4', t: 'sage', eyebrow: 'singapore · fy24', title: 'Rebuilt across two continents.', body: 'A site closed. The roadmap didn’t.', stats: [{ n: '2 qtrs', l: 'to fully staffed' }, { n: '8 of 8', l: 'retained a year later' }] },
+    { id: 'leading-5', t: 'peri', eyebrow: 'new york · fy25', title: 'Move people toward what they’re good at.', body: 'A manager back to craft. Three hires around him. Delivery sped up while the team was still forming.' },
+    { id: 'leading-6', t: 'sand', eyebrow: 'bangalore · fy26', title: 'The system, again. Remotely.', body: 'A third rebuild, run as the only leader outside the site. It kept shipping through the move.', visual: 'cities' },
+    { id: 'leading-7', t: 'dark', eyebrow: 'outcome', title: 'Same loop. Every city.', stats: [{ n: '8 → 15', l: 'designers to a global org' }, { n: '4', l: 'rebuilds, one system' }, { n: '0', l: 'roadmaps paused' }] },
+    // 04 - Global by design
+    { id: 'global', t: 'teal', big: true, eyebrow: '04 · strategy · global by design', title: 'Global by design', body: 'One market in. Developed markets out.', note: 'How a Canada-only design team came to own a mission for the developed markets, and why global expansion is the work I want next.' },
+    { id: 'global-2', t: 'sage', eyebrow: 'the problem', title: 'A global product, built for one market.', body: 'Eight designers, three product areas, and overnight no PM or engineering partners.', note: 'Segment leaders were not solving for anyone outside the US. The vision asked for 3× growth abroad. Nobody owned it.' },
+    { id: 'global-3', t: 'cream', eyebrow: 'v1 · embed', title: 'Embed first. Then tell the truth.', body: 'I mapped every designer into a US segment team and tracked all the work in one planner, so Canadian priorities were visible in every planning room.', stats: [{ n: '3', l: 'segments, one shared roadmap: Payments, Payroll, Advanced' }, { n: '1', l: 'retro that named it: designers had become gap fillers' }] },
+    { id: 'global-4', t: 'sand', eyebrow: 'v2 · the tests', title: 'Where should a non-US team own the work?', visual: 'tests' },
+    { id: 'global-5', t: 'peri', eyebrow: 'v2 · the durable model', title: 'Own a pillar. Drive it for the world.', body: 'The tests pointed to Advanced Growth: mid-market accounting, onboarding and migration, global expansion. A Canada-based team owning it for the developed markets.', note: 'Then the right designer for each role: skills scored one to ten, strengths and gaps named, rankings checked with a second leader.' },
+    { id: 'global-6', t: 'cream', eyebrow: 'change management', title: 'Change happens one person at a time.', body: 'A written transition plan for every designer. Transparent check-ins through the uncertainty. No commitments past the quarter, and some moves pulled forward so design arrived before solutioning did.' },
+    { id: 'global-7', t: 'dark', eyebrow: 'why me, for global expansion', title: 'I have already run this play.', body: 'Taking a product built for one market and making it work for many is not a new brief for me. I have led it from the inside, on both sides of the border.', stats: [{ n: '8', l: 'designers, from gap fillers to owning a mission' }, { n: '3', l: 'tests for where global work should live' }, { n: '2', l: 'operating models, the second built on what the first got wrong' }] }
+  ];
+
+  var CHAPTERS = [
+    { key: 'home', label: 'home', start: 0, count: 1 },
+    { key: 'alaska', label: '01 · project alaska', start: 1, count: 6 },
+    { key: 'amazon', label: '02 · amazon × intuit', start: 7, count: 6 },
+    { key: 'leading', label: '03 · leading teams', start: 13, count: 7 },
+    { key: 'global', label: '04 · global by design', start: 20, count: 7 },
+    { key: 'talk', label: 'let’s talk', start: 27, count: 1 }
+  ];
+  var TOTAL = 1 + DATA.length + 1;
+
+  var THEMES = {
+    teal: { bg: 'var(--teal)', fg: 'var(--cream)', accent: 'var(--pink)', bodyColor: 'var(--on-dark)', noteColor: 'rgba(249,246,239,.8)', muted: 'rgba(249,246,239,.7)', rule: 'var(--cream)', ruleSoft: 'rgba(249,246,239,.3)', titleShadow: '2px 2px 0 rgba(20,52,46,.5)' },
+    sage: { bg: 'var(--band-sage)', fg: 'var(--ink)', accent: 'var(--terracotta)', bodyColor: 'var(--ink)', noteColor: 'var(--body)', muted: 'var(--caption-fg)', rule: 'var(--ink)', ruleSoft: 'rgba(20,52,46,.2)', titleShadow: 'var(--shadow-offset-mustard)' },
+    peri: { bg: 'var(--tint-periwinkle)', fg: 'var(--ink)', accent: 'var(--terracotta)', bodyColor: 'var(--ink)', noteColor: 'var(--body)', muted: 'var(--caption-fg)', rule: 'var(--ink)', ruleSoft: 'rgba(20,52,46,.2)', titleShadow: 'var(--shadow-offset-mustard)' },
+    sand: { bg: 'var(--tint-sand)', fg: 'var(--ink)', accent: 'var(--terracotta)', bodyColor: 'var(--ink)', noteColor: 'var(--body)', muted: 'var(--caption-fg)', rule: 'var(--ink)', ruleSoft: 'rgba(20,52,46,.2)', titleShadow: 'var(--shadow-offset-mustard)' },
+    cream: { bg: 'var(--cream)', fg: 'var(--ink)', accent: 'var(--terracotta)', bodyColor: 'var(--ink)', noteColor: 'var(--body)', muted: 'var(--caption-fg)', rule: 'var(--ink)', ruleSoft: 'var(--hairline)', titleShadow: 'none' },
+    dark: { bg: 'var(--band-dark)', fg: 'var(--cream)', accent: 'var(--mustard)', bodyColor: 'var(--on-dark)', noteColor: 'var(--on-dark-soft)', muted: 'var(--on-dark-muted)', rule: 'var(--cream)', ruleSoft: 'var(--on-dark-faint)', titleShadow: '2px 2px 0 var(--terracotta)' }
+  };
+
+  /* ---------- shared phone-mockup fragments ---------- */
+  var SPARK16 = '<span style="width:16px;height:16px;flex:none;border-radius:50%;background:rgb(35,108,255);display:flex;align-items:center;justify-content:center"><svg width="9" height="9" viewBox="0 0 10 10" fill="#fff"><path d="M5 0l1.2 3.8L10 5 6.2 6.2 5 10 3.8 6.2 0 5l3.8-1.2z"></path></svg></span>';
+  var SPARK14 = '<span style="width:14px;height:14px;flex:none;border-radius:50%;background:rgb(35,108,255);display:flex;align-items:center;justify-content:center"><svg width="8" height="8" viewBox="0 0 10 10" fill="#fff"><path d="M5 0l1.2 3.8L10 5 6.2 6.2 5 10 3.8 6.2 0 5l3.8-1.2z"></path></svg></span>';
+  var CHECK16 = '<span style="width:16px;height:16px;flex:none;border-radius:50%;background:var(--qb-ui-positive);display:flex;align-items:center;justify-content:center"><svg width="9" height="9" viewBox="0 0 10 10" fill="none" stroke="#fff" stroke-width="1.8"><path d="M1.5 5.2l2.4 2.4 4.6-5"></path></svg></span>';
+  var HAMBURGER = '<span style="display:flex;flex-direction:column;gap:2px;width:12px"><span style="height:1.5px;background:#0f1111"></span><span style="height:1.5px;background:#0f1111"></span><span style="height:1.5px;background:#0f1111"></span></span>';
+  var AMZ_LOGO = '<span style="display:flex;flex-direction:column;align-items:center;line-height:1"><span style="font-weight:700;font-size:10px;letter-spacing:-.2px">amazon <span style="font-weight:400">seller</span></span><svg width="24" height="6" viewBox="0 0 24 6" fill="none" stroke="#ff9900" stroke-width="1.6" stroke-linecap="round"><path d="M1 1.5c5 4 17 4 22 0"></path><path d="M20.5 1.2l2.5.3-1.4 2.1"></path></svg></span>';
+  var AMZ_SEARCH = '<svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="#0f1111" stroke-width="1.4"><circle cx="4.2" cy="4.2" r="3.2"></circle><path d="M6.6 6.6L9.2 9.2"></path></svg>';
+  var AMZ_BELL = '<svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="#0f1111" stroke-width="1.4"><path d="M2 7.2V4.5a3 3 0 016 0v2.7l.8 1H1.2z"></path><path d="M4 9.2h2"></path></svg>';
+  var AMZ_TOP = '<div style="background:#fff;color:#0f1111;padding:0 12px;height:30px;flex:none;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #d5d9d9">' + HAMBURGER + AMZ_LOGO + '<span style="display:flex;gap:8px;align-items:center;color:#0f1111">' + AMZ_SEARCH + AMZ_BELL + '</span></div>';
+  var ASSIST_CHIP_OPEN = '<div style="background:rgb(238,243,255);border-radius:8px;padding:8px 10px;display:flex;gap:7px;align-items:center;font-size:8px;line-height:1.5">' + SPARK14;
+  function qbNav(left, title, right) {
+    return '<div style="height:26px;flex:none;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:0 12px;border-bottom:1px solid var(--qb-divider-tertiary)"><span' + (left.style ? ' style="' + left.style + '"' : '') + '>' + (left.text || '') + '</span><span style="font-weight:600;font-size:10px">' + title + '</span><span style="text-align:right;' + (right.style || '') + '">' + (right.text || '') + '</span></div>';
+  }
+  function amzSub(left, title, right) {
+    return '<div style="background:#f7f8f8;color:#0f1111;padding:0 12px;height:22px;flex:none;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;border-bottom:1px solid #d5d9d9;font-size:8px"><span style="color:#007185">' + left + '</span><span style="font-weight:700;font-size:9px">' + title + '</span><span style="text-align:right;color:#007185;font-weight:600">' + right + '</span></div>';
+  }
+
+  /* ---------- phone screen variants ---------- */
+  var VARIANTS = {
+    email: function () {
+      return qbNav({ text: '‹ Mail', style: 'color:var(--qb-ui-primary);font-weight:500' }, 'Inbox', { text: '142', style: 'color:var(--qb-text-secondary)' }) +
+        '<div style="padding:10px 12px;display:flex;flex-direction:column;gap:5px"><div style="display:flex;justify-content:space-between"><span style="font-weight:600">Jeff Ganes</span><span style="color:var(--qb-text-secondary)">4:15 PM</span></div><div style="font-weight:600;font-size:11px;line-height:1.3">FWD: Pasta Order</div><div style="color:var(--qb-text-secondary)">Hi Jane, I also need to place another order. The Tomato Basil is really selling here.</div><div>All Fettuccine:<br>Spinach 2 cases<br>Tomato Basil 3 cases<br>Lemon Pepper 1 case<br>Mushroom 1 case<br>Chocolate 1 case</div><div style="color:var(--qb-text-secondary)">Thanks, Jeff</div></div>';
+    },
+    blank: function () {
+      return qbNav({}, 'New invoice', {}) +
+        '<div style="flex:1;padding:12px;display:flex;flex-direction:column;gap:12px;background:var(--qb-page-bg-secondary)"><div style="background:#fff;border-radius:8px;padding:12px;display:flex;flex-direction:column;gap:8px"><div style="display:flex;flex-direction:column;gap:3px"><span style="color:var(--qb-text-secondary);font-size:8px;font-weight:500">Customer</span><div style="border:1px solid var(--qb-container-border-tertiary);border-radius:4px;height:22px;display:flex;align-items:center;padding:0 8px;color:var(--qb-text-tertiary)">Search customers</div></div><div style="display:flex;flex-direction:column;gap:3px"><span style="color:var(--qb-text-secondary);font-size:8px;font-weight:500">Product or service</span><div style="border:1px solid var(--qb-container-border-tertiary);border-radius:4px;height:22px;display:flex;align-items:center;padding:0 8px;color:var(--qb-text-tertiary)">Type to add</div></div><div style="display:flex;gap:8px"><div style="flex:1;display:flex;flex-direction:column;gap:3px"><span style="color:var(--qb-text-secondary);font-size:8px;font-weight:500">Qty</span><div style="border:1px solid var(--qb-container-border-tertiary);border-radius:4px;height:22px"></div></div><div style="flex:1;display:flex;flex-direction:column;gap:3px"><span style="color:var(--qb-text-secondary);font-size:8px;font-weight:500">Rate</span><div style="border:1px solid var(--qb-container-border-tertiary);border-radius:4px;height:22px"></div></div></div></div><div style="background:#fff;border-radius:8px;padding:4px 12px;display:flex;flex-direction:column"><div style="padding:8px 0;border-bottom:1px solid var(--qb-divider-tertiary);color:var(--qb-ui-primary);font-weight:600">+ Add line</div><div style="padding:8px 0;border-bottom:1px solid var(--qb-divider-tertiary);color:var(--qb-ui-primary);font-weight:600">+ Add line</div><div style="padding:8px 0;border-bottom:1px solid var(--qb-divider-tertiary);color:var(--qb-ui-primary);font-weight:600">+ Add line</div><div style="padding:8px 0;border-bottom:1px solid var(--qb-divider-tertiary);color:var(--qb-ui-primary);font-weight:600">+ Add line</div><div style="padding:8px 0;color:var(--qb-ui-primary);font-weight:600">+ Add line</div></div></div>';
+    },
+    inbox: function () {
+      return qbNav({ text: '‹ Inbox', style: 'color:var(--qb-ui-primary);font-weight:500' }, 'Message', { text: '•••', style: 'color:var(--qb-icon-secondary);letter-spacing:1px' }) +
+        '<div style="padding:10px 12px;display:flex;flex-direction:column;gap:5px;flex:1"><div style="font-weight:600;font-size:11px;line-height:1.3">FWD: Pasta Order</div><div style="color:var(--qb-text-secondary)">Jeff Ganes · 4:15 PM</div><div style="padding-top:2px">Hi Jane, I also need to place another order.</div><div>All Fettuccine:<br>Spinach 2 cases<br>Tomato Basil 3 cases<br>Lemon Pepper 1 case<br>Mushroom 1 case<br>Chocolate 1 case</div></div>' +
+        '<div style="margin:0 12px 12px;background:var(--qb-container-bg-accent);border:1px solid var(--qb-container-border-tertiary);border-radius:8px;padding:9px 10px;display:flex;gap:8px;align-items:center">' + SPARK16 + '<span style="flex:1;display:flex;flex-direction:column"><span style="font-weight:600">Create an invoice from this email</span><span style="color:var(--qb-text-secondary);font-size:8px">Intuit Assist</span></span><span style="color:var(--qb-icon-secondary)">›</span></div>';
+    },
+    working: function () {
+      var row = function (icon, label) { return '<div class="wk-rise" style="display:flex;align-items:center;gap:9px;padding:8px 0;border-bottom:1px solid var(--qb-divider-tertiary)">' + icon + '<span>' + label + '</span></div>'; };
+      return qbNav({}, 'Drafting invoice', { text: '×', style: 'color:var(--qb-icon-secondary);font-size:11px' }) +
+        '<div style="flex:1;padding:16px 12px 12px;display:flex;flex-direction:column;gap:12px;background:var(--qb-page-bg-secondary)"><div class="wk-rise" style="display:flex;align-items:center;gap:8px">' + SPARK16 + '<span style="font-weight:600;font-size:10px">Intuit Assist is working</span></div><div style="background:#fff;border-radius:8px;padding:4px 12px;display:flex;flex-direction:column">' +
+        row(CHECK16, 'Read the email') +
+        row(CHECK16, 'Found customer · <b style="font-weight:600">Jeff Ganes</b>') +
+        row(CHECK16, 'Matched <b style="font-weight:600">4 of 5</b> products') +
+        row('<span style="width:16px;height:16px;flex:none;border-radius:50%;border:1.5px solid var(--qb-ui-attention);color:var(--qb-ui-attention);display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700">!</span>', '1 item needs your review') +
+        '<div style="display:flex;align-items:center;gap:9px;padding:8px 0;color:var(--qb-text-secondary)"><span style="width:16px;height:16px;flex:none;border-radius:50%;border:1.5px solid var(--qb-divider-secondary);border-top-color:var(--qb-ui-primary)"></span><span>Building the draft…</span></div></div>' +
+        '<div style="margin-top:auto;background:#fff;border-radius:8px;padding:10px 12px;display:flex;gap:8px;align-items:center;color:var(--qb-text-secondary);font-size:8px;line-height:1.5"><span style="width:14px;height:14px;flex:none;border-radius:50%;border:1.5px solid var(--qb-ui-info);color:var(--qb-ui-info);display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:700;font-style:italic">i</span><span>Nothing is sent until you review it.</span></div></div>';
+    },
+    draft: function () {
+      return qbNav({ text: 'Cancel', style: 'color:var(--qb-ui-primary);font-weight:500' }, 'Review invoice', {}) +
+        '<div style="flex:1;background:var(--qb-page-bg-secondary);padding:8px 12px 12px;display:flex;flex-direction:column;gap:8px"><div style="background:rgb(238,243,255);border:1px solid rgb(35,108,255);border-radius:8px;padding:7px 10px;display:flex;gap:7px;align-items:center">' + SPARK14 + '<span>Matched 4 of 5 products from Jeff’s email</span></div><div style="background:#fff;border-radius:8px;padding:4px 12px;display:flex;flex-direction:column"><div style="display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid var(--qb-divider-tertiary)"><span>Spinach Fettuccine × 2</span><span style="font-weight:500">$200.00</span></div><div style="display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid var(--qb-divider-tertiary)"><span>Tomato Basil × 3</span><span style="font-weight:500">$240.00</span></div><div style="display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid var(--qb-divider-tertiary)"><span>Lemon Pepper × 1</span><span style="font-weight:500">$100.00</span></div><div style="display:flex;justify-content:space-between;padding:7px 0"><span>Portobello × 1</span><span style="font-weight:500">$60.00</span></div></div><div style="display:flex;justify-content:space-between;align-items:center;padding:8px 10px;background:var(--qb-container-bg-attention);border-left:3px solid var(--qb-ui-attention);border-radius:4px"><span style="display:flex;flex-direction:column;gap:1px"><span style="font-weight:600">“Chocolate 1 case”</span><span style="color:var(--qb-text-secondary);font-size:8px">No matching product</span></span><span style="color:var(--qb-ui-primary);font-weight:600">Fix</span></div></div>' +
+        '<div style="flex:none;padding:8px 12px 12px;border-top:1px solid var(--qb-divider-tertiary);display:flex;flex-direction:column;gap:6px"><div style="display:flex;justify-content:space-between;align-items:baseline"><span style="color:var(--qb-text-secondary)">Total</span><span style="font-weight:700;font-size:12px">$600.00</span></div><div style="background:var(--qb-action-standard);color:#fff;border-radius:4px;height:26px;display:flex;align-items:center;justify-content:center;font-weight:600;font-size:10px">Review and send</div></div>';
+    },
+    split: function () {
+      return qbNav({ text: 'Cancel', style: 'color:var(--qb-ui-primary);font-weight:500' }, 'Review invoice', {}) +
+        '<div style="margin:10px 12px 0;display:flex;border:1px solid var(--qb-ui-primary);border-radius:8px;overflow:hidden"><div style="flex:1;text-align:center;padding:5px;background:var(--qb-ui-primary);color:#fff;font-weight:600">Email</div><div style="flex:1;text-align:center;padding:5px;color:var(--qb-ui-primary);font-weight:600">Invoice</div></div>' +
+        '<div style="padding:12px 12px;display:flex;flex-direction:column;gap:6px;flex:1"><div style="font-weight:600">FWD: Pasta Order · Jeff Ganes</div><div>Hi Jane, I also need to place another order.</div><div style="line-height:1.7">All Fettuccine:<br><span style="background:var(--qb-container-bg-positive);border-radius:4px;padding:1px 4px">Spinach 2 cases</span><br><span style="background:var(--qb-container-bg-positive);border-radius:4px;padding:1px 4px">Tomato Basil 3 cases</span><br><span style="background:var(--qb-container-bg-positive);border-radius:4px;padding:1px 4px">Lemon Pepper 1 case</span><br><span style="background:var(--qb-container-bg-positive);border-radius:4px;padding:1px 4px">Mushroom 1 case</span><br><span style="background:var(--qb-container-bg-attention);border-radius:4px;padding:1px 4px;border-bottom:1.5px solid var(--qb-ui-attention)">Chocolate 1 case</span></div><div style="margin-top:auto;display:flex;gap:6px;font-size:8px;color:var(--qb-text-secondary)"><span style="display:flex;align-items:center;gap:3px"><span style="width:8px;height:8px;border-radius:2px;background:var(--qb-container-bg-positive);border:1px solid var(--qb-ui-positive)"></span>Matched</span><span style="display:flex;align-items:center;gap:3px"><span style="width:8px;height:8px;border-radius:2px;background:var(--qb-container-bg-attention);border:1px solid var(--qb-ui-attention)"></span>Needs review</span></div><div style="background:var(--qb-page-bg-secondary);border-radius:8px;padding:9px 10px;font-size:8px;color:var(--qb-text-secondary);line-height:1.5">Tap a highlight to jump to that line.</div></div>';
+    },
+    sheet: function () {
+      return qbNav({ text: 'Cancel', style: 'color:var(--qb-ui-primary);font-weight:500' }, 'Review invoice', {}) +
+        '<div style="flex:1;background:var(--qb-page-bg-secondary);padding:8px 12px"><div style="background:#fff;border-radius:8px;padding:4px 12px"><div style="display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid var(--qb-divider-tertiary)"><span>Spinach Fettuccine × 2</span><span>$200.00</span></div><div style="display:flex;justify-content:space-between;padding:7px 0"><span>Tomato Basil × 3</span><span>$240.00</span></div></div></div>' +
+        '<div style="position:absolute;inset:0;background:rgba(0,0,0,.4)"></div>' +
+        '<div style="position:absolute;left:0;right:0;bottom:0;background:#fff;border-radius:16px 16px 0 0;padding:6px 12px 12px;display:flex;flex-direction:column;gap:8px;box-shadow:0 -2px 8px rgba(0,0,0,.2)"><div style="display:flex;justify-content:center"><div style="width:32px;height:4px;border-radius:2px;background:var(--qb-divider-tertiary)"></div></div><div style="font-weight:600;font-size:11px;padding-top:2px">Match “Chocolate 1 case”</div><div style="border:1px solid var(--qb-ui-primary);border-radius:4px;height:24px;padding:0 8px;display:flex;align-items:center;justify-content:space-between"><span>Chocolate<span style="display:inline-block;width:1px;height:10px;background:var(--qb-ui-primary);margin-left:1px;vertical-align:middle"></span></span><svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="rgb(107,108,114)" stroke-width="1.5"><circle cx="5" cy="5" r="3.6"></circle><path d="M7.8 7.8L11 11"></path></svg></div><div style="display:flex;flex-direction:column"><div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--qb-divider-tertiary)"><span style="display:flex;flex-direction:column;gap:1px"><span style="font-weight:600">Chocolate Fettuccine</span><span style="color:var(--qb-text-secondary);font-size:8px">SKU 912 · $100.00 per case</span></span><span style="width:14px;height:14px;border-radius:50%;background:var(--qb-ui-primary);display:flex;align-items:center;justify-content:center"><span style="width:5px;height:5px;border-radius:50%;background:#fff"></span></span></div><div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0"><span style="display:flex;flex-direction:column;gap:1px"><span>Chocolate Ravioli</span><span style="color:var(--qb-text-secondary);font-size:8px">SKU 940 · $120.00 per case</span></span><span style="width:14px;height:14px;border-radius:50%;border:1.5px solid var(--qb-divider-secondary)"></span></div></div><div style="background:var(--qb-action-standard);color:#fff;border-radius:4px;height:26px;display:flex;align-items:center;justify-content:center;font-weight:600;font-size:10px">Use this match</div></div>';
+    },
+    sent: function () {
+      return qbNav({ text: '‹ Invoices', style: 'color:var(--qb-ui-primary);font-weight:500' }, 'Invoice 12345', { text: '•••', style: 'color:var(--qb-icon-secondary);letter-spacing:1px' }) +
+        '<div style="flex:1;background:var(--qb-page-bg-secondary);padding:8px 12px;display:flex;flex-direction:column;gap:8px"><div style="background:#fff;border-radius:8px;padding:12px;display:flex;flex-direction:column;gap:6px;align-items:center;text-align:center"><span class="wk-pop" style="width:28px;height:28px;border-radius:50%;background:var(--qb-ui-positive);display:flex;align-items:center;justify-content:center"><svg width="14" height="14" viewBox="0 0 10 10" fill="none" stroke="#fff" stroke-width="1.6"><path d="M1.5 5.2l2.4 2.4 4.6-5"></path></svg></span><span style="font-weight:700;font-size:16px;line-height:1.1">$700.00</span><span style="font-weight:600;font-size:10px">Sent to Jeff Ganes</span><span style="display:inline-flex;align-items:center;gap:4px;padding:2px 7px;border-radius:9999px;background:var(--qb-container-bg-positive);color:var(--qb-ui-positive);font-weight:600;font-size:8px">Due Aug 30</span></div><div style="background:#fff;border-radius:8px;padding:4px 12px;display:flex;flex-direction:column"><div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid var(--qb-divider-tertiary)"><span>Spinach Fettuccine × 2</span><span>$200.00</span></div><div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid var(--qb-divider-tertiary)"><span>Tomato Basil × 3</span><span>$240.00</span></div><div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid var(--qb-divider-tertiary)"><span>Lemon Pepper × 1</span><span>$100.00</span></div><div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid var(--qb-divider-tertiary)"><span>Portobello × 1</span><span>$60.00</span></div><div style="display:flex;justify-content:space-between;padding:6px 0"><span>Chocolate Fettuccine × 1</span><span>$100.00</span></div></div></div>' +
+        '<div style="flex:none;padding:8px 12px 12px;border-top:1px solid var(--qb-divider-tertiary);display:flex;gap:8px"><div style="flex:1;border:1px solid var(--qb-ui-primary);color:var(--qb-ui-primary);border-radius:4px;height:26px;display:flex;align-items:center;justify-content:center;font-weight:600">View email</div><div style="flex:1;background:var(--qb-action-standard);color:#fff;border-radius:4px;height:26px;display:flex;align-items:center;justify-content:center;font-weight:600">Record payment</div></div>';
+    },
+    payout: function () {
+      return '<div style="background:#fff;color:#0f1111;padding:0 12px;height:30px;flex:none;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;border-bottom:1px solid #d5d9d9">' + HAMBURGER + AMZ_LOGO + '<span style="display:flex;justify-content:flex-end">' + AMZ_BELL + '</span></div>' +
+        '<div style="flex:1;background:var(--qb-page-bg-secondary);padding:10px 12px;display:flex;flex-direction:column;gap:8px"><div style="display:flex;justify-content:space-between;align-items:center;padding:0 2px"><span style="font-weight:700;font-size:10px;color:#0f1111">Payments</span><span style="color:#007185;font-size:8px;font-weight:600">Apr 1–14 ▾</span></div><div style="background:#fff;border-radius:8px;padding:10px 12px;display:flex;flex-direction:column;border:1px solid var(--qb-divider-tertiary)"><div style="color:var(--qb-text-secondary)">Transferred to bank</div><div style="font-weight:700;font-size:20px;line-height:1.1;padding:2px 0 8px">$1,444.38</div><div style="display:flex;justify-content:space-between;padding:5px 0;border-top:1px solid var(--qb-divider-tertiary)"><span>Product charges</span><span>$6,502.10</span></div><div style="display:flex;justify-content:space-between;padding:5px 0;border-top:1px solid var(--qb-divider-tertiary)"><span>Amazon fees</span><span style="color:var(--qb-ui-negative)">-$1,239.42</span></div><div style="display:flex;justify-content:space-between;padding:5px 0;border-top:1px solid var(--qb-divider-tertiary)"><span>Advertising</span><span style="color:var(--qb-ui-negative)">-$3,126.00</span></div><div style="display:flex;justify-content:space-between;padding:5px 0;border-top:1px solid var(--qb-divider-tertiary)"><span>Refunds &amp; reserve</span><span style="color:var(--qb-ui-negative)">-$692.30</span></div></div><div style="color:var(--qb-text-secondary);padding:0 2px;line-height:1.5">Cost of goods? Not here. Profit? Not here.</div></div>';
+    },
+    xls: function () {
+      return '<div style="height:26px;flex:none;display:flex;align-items:center;padding:0 12px;border-bottom:1px solid var(--qb-divider-tertiary);font-weight:600;font-size:10px">Profit_Apr_FINAL_v3.xlsx</div>' +
+        '<div style="display:grid;grid-template-columns:1.3fr 1fr 1fr;font-size:8px"><div style="padding:5px 7px;background:var(--qb-page-bg-secondary);border-bottom:1px solid var(--qb-divider-tertiary);font-weight:600">Source</div><div style="padding:5px 7px;background:var(--qb-page-bg-secondary);border-bottom:1px solid var(--qb-divider-tertiary);font-weight:600">In</div><div style="padding:5px 7px;background:var(--qb-page-bg-secondary);border-bottom:1px solid var(--qb-divider-tertiary);font-weight:600">Out</div><div style="padding:5px 7px;border-bottom:1px solid var(--qb-divider-tertiary)">Amazon payout</div><div style="padding:5px 7px;border-bottom:1px solid var(--qb-divider-tertiary)">1,444</div><div style="padding:5px 7px;border-bottom:1px solid var(--qb-divider-tertiary)"></div><div style="padding:5px 7px;border-bottom:1px solid var(--qb-divider-tertiary)">Ads (Amazon)</div><div style="padding:5px 7px;border-bottom:1px solid var(--qb-divider-tertiary)"></div><div style="padding:5px 7px;border-bottom:1px solid var(--qb-divider-tertiary)">3,126</div><div style="padding:5px 7px;border-bottom:1px solid var(--qb-divider-tertiary)">Supplier inv.</div><div style="padding:5px 7px;border-bottom:1px solid var(--qb-divider-tertiary)"></div><div style="padding:5px 7px;border-bottom:1px solid var(--qb-divider-tertiary)">2,235</div><div style="padding:5px 7px;border-bottom:1px solid var(--qb-divider-tertiary)">Shopify</div><div style="padding:5px 7px;border-bottom:1px solid var(--qb-divider-tertiary)">???</div><div style="padding:5px 7px;border-bottom:1px solid var(--qb-divider-tertiary)"></div><div style="padding:5px 7px;border-bottom:1px solid var(--qb-divider-tertiary)">FBA storage</div><div style="padding:5px 7px;border-bottom:1px solid var(--qb-divider-tertiary)"></div><div style="padding:5px 7px;border-bottom:1px solid var(--qb-divider-tertiary);background:var(--qb-container-bg-attention);color:var(--qb-ui-attention);font-weight:600">#REF!</div><div style="padding:5px 7px;border-bottom:1px solid var(--qb-divider-tertiary)">Sales tax</div><div style="padding:5px 7px;border-bottom:1px solid var(--qb-divider-tertiary)"></div><div style="padding:5px 7px;border-bottom:1px solid var(--qb-divider-tertiary)">?</div><div style="padding:5px 7px;font-weight:600">Profit</div><div style="padding:5px 7px;font-weight:600;background:var(--qb-container-bg-negative);color:var(--qb-ui-negative)">#VALUE!</div><div style="padding:5px 7px"></div></div>' +
+        '<div style="margin:auto 12px 12px;color:var(--qb-text-secondary)">Last edited 11:20 PM · Sunday</div>';
+    },
+    home: function () {
+      return AMZ_TOP + '<div style="background:#f7f8f8;color:#0f1111;padding:0 12px;height:22px;flex:none;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #d5d9d9;font-size:8px"><span style="font-weight:700;font-size:9px">EcoWave · Home</span><span style="background:#ff9900;color:#0f1111;padding:1px 6px;border-radius:9999px;font-weight:700">Healthy</span></div>' +
+        '<div style="background:var(--qb-page-bg-secondary);flex:1;padding:8px 12px;display:flex;flex-direction:column;gap:8px"><div style="display:flex;gap:8px"><div style="flex:1;background:#fff;border-radius:8px;padding:8px 10px;border:1px solid var(--qb-divider-tertiary)"><div style="color:var(--qb-text-secondary);font-size:8px">Today’s sales</div><div style="font-weight:700;font-size:12px">$1,240.00</div></div><div style="flex:1;background:#fff;border-radius:8px;padding:8px 10px;border:1px solid var(--qb-divider-tertiary)"><div style="color:var(--qb-text-secondary);font-size:8px">Orders</div><div style="font-weight:700;font-size:12px">38</div></div></div><div style="background:#fff;border-radius:8px;padding:10px 12px;display:flex;flex-direction:column;gap:6px;border:1px solid var(--qb-ui-primary)"><div style="display:flex;flex-direction:column;gap:2px"><span style="font-weight:600;font-size:10px">Profitability &amp; cash flow</span><span style="display:flex;align-items:center;gap:4px;color:var(--qb-text-tertiary);font-size:7px"><span style="width:7px;height:7px;border-radius:50%;background:var(--qb-ui-primary);flex:none"></span>Powered by QuickBooks</span></div><div style="display:flex;justify-content:space-between;align-items:baseline"><span style="color:var(--qb-text-secondary)">Net income · March</span><span class="wk-rise" style="font-weight:700;font-size:14px">$500.00</span></div><div style="display:flex;flex-direction:column;gap:3px"><div style="display:flex;justify-content:space-between"><span>Income $6,500.00</span><span style="color:var(--qb-ui-primary);font-weight:600">8 to review</span></div><div style="height:6px;background:var(--qb-page-bg-secondary);border-radius:4px"><div class="wk-x" style="width:92%;height:6px;background:var(--qb-ui-primary);border-radius:4px;transform-origin:left"></div></div></div><div style="display:flex;flex-direction:column;gap:3px"><div style="display:flex;justify-content:space-between"><span>Expenses $6,000.00</span><span style="color:var(--qb-ui-primary);font-weight:600">15 to review</span></div><div style="height:6px;background:var(--qb-page-bg-secondary);border-radius:4px"><div class="wk-x2" style="width:85%;height:6px;background:var(--qb-ui-info);border-radius:4px;transform-origin:left"></div></div></div><div style="color:var(--qb-ui-primary);font-weight:600">See profit and loss report ›</div></div><div style="background:#fff;border-radius:8px;padding:10px 12px;display:flex;flex-direction:column;gap:6px;border:1px solid var(--qb-divider-tertiary)"><div style="display:flex;justify-content:space-between;align-items:center"><span style="font-weight:600;font-size:10px">Inventory</span><span style="color:var(--qb-text-secondary);font-size:8px">Seller Central</span></div><div style="display:flex;justify-content:space-between"><span style="color:var(--qb-text-secondary)">Low stock</span><span style="font-weight:600">3 SKUs</span></div></div></div>';
+    },
+    pnl: function () {
+      return AMZ_TOP + amzSub('‹ Finance', 'Profit &amp; loss', 'Mar ▾') +
+        '<div style="flex:1;background:var(--qb-page-bg-secondary);padding:8px 12px;display:flex;flex-direction:column;gap:6px"><div style="background:#fff;border-radius:8px;padding:8px 12px;display:flex;flex-direction:column;gap:4px;border:1px solid var(--qb-divider-tertiary)"><div style="color:var(--qb-text-secondary)">Net income for March</div><div class="wk-rise" style="font-weight:700;font-size:20px;line-height:1.1">$500.00</div><div style="display:flex;align-items:center;gap:4px;padding-top:4px;color:var(--qb-text-tertiary);font-size:7px"><span style="width:8px;height:8px;border-radius:50%;background:var(--qb-ui-primary);flex:none"></span><span>Powered by QuickBooks</span></div></div><div style="background:#fff;border-radius:8px;padding:8px 12px;display:flex;flex-direction:column;gap:4px;border:1px solid var(--qb-divider-tertiary)"><div style="display:flex;flex-direction:column;gap:3px"><div style="display:flex;justify-content:space-between"><span style="font-weight:600">Income</span><span>$6,500.00</span></div><div style="height:8px;background:var(--qb-page-bg-secondary);border-radius:4px"><div class="wk-x" style="width:92%;height:8px;background:var(--qb-ui-primary);border-radius:4px;transform-origin:left"></div></div></div><div style="display:flex;flex-direction:column;gap:3px"><div style="display:flex;justify-content:space-between"><span style="font-weight:600">Expenses</span><span>$6,000.00</span></div><div style="height:8px;background:var(--qb-page-bg-secondary);border-radius:4px"><div class="wk-x2" style="width:85%;height:8px;background:var(--qb-ui-info);border-radius:4px;transform-origin:left"></div></div></div></div><div style="background:#fff;border-radius:8px;padding:8px 12px;display:flex;flex-direction:column;gap:4px;border:1px solid var(--qb-divider-tertiary)"><div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid var(--qb-divider-tertiary)"><span>Amazon sales</span><span>$5,890.00</span></div><div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid var(--qb-divider-tertiary)"><span>Advertising</span><span>-$3,126.00</span></div><div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid var(--qb-divider-tertiary)"><span>Cost of goods sold</span><span>-$2,235.00</span></div><div style="display:flex;justify-content:space-between;padding:4px 0"><span>Amazon fees</span><span>-$1,239.00</span></div></div></div>';
+    },
+    donut: function () {
+      return AMZ_TOP + amzSub('‹ Finance', 'Expenses', 'Last month ▾') +
+        '<div style="flex:1;background:var(--qb-page-bg-secondary);padding:8px 12px;display:flex;flex-direction:column;gap:8px"><div style="background:#fff;border-radius:8px;padding:10px 12px;display:flex;flex-direction:column;gap:6px;border:1px solid var(--qb-divider-tertiary)"><div style="display:flex;flex-direction:column;align-items:center;gap:10px"><div class="wk-pop" style="position:relative;width:104px;height:104px;border-radius:50%;background:conic-gradient(var(--qb-ui-info) 0 47%,var(--qb-ui-primary) 47% 81%,rgb(186,190,197) 81% 100%)"><div style="position:absolute;inset:16px;border-radius:50%;background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center"><span style="color:var(--qb-text-secondary);font-size:7px">Total</span><span style="font-weight:700;font-size:10px;line-height:1.2">$6,600.00</span></div></div><div style="width:100%;display:flex;flex-direction:column"><div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid var(--qb-divider-tertiary)"><span style="display:flex;align-items:center;gap:6px"><span style="width:8px;height:8px;border-radius:50%;background:var(--qb-ui-info)"></span>Advertising</span><b style="font-weight:600">$3,126.00</b></div><div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid var(--qb-divider-tertiary)"><span style="display:flex;align-items:center;gap:6px"><span style="width:8px;height:8px;border-radius:50%;background:var(--qb-ui-primary)"></span>Cost of goods sold</span><b style="font-weight:600">$2,235.00</b></div><div style="display:flex;justify-content:space-between;padding:6px 0"><span style="display:flex;align-items:center;gap:6px"><span style="width:8px;height:8px;border-radius:50%;background:rgb(186,190,197)"></span>Amazon fees</span><b style="font-weight:600">$1,239.00</b></div></div></div></div>' + ASSIST_CHIP_OPEN + '<span><b style="font-weight:600">Ad spend is 47% of expenses,</b> up from 38% in February.</span></div></div>';
+    },
+    cash: function () {
+      var bars = [[50, 36], [64, 44], [86, 55], [41, 47], [73, 53], [91, 60], [96, 58], [70, 50], [82, 62], [60, 48], [88, 66], [100, 64]];
+      var barHtml = bars.map(function (b) {
+        return '<div class="wk-y" style="flex:1;display:flex;gap:1px;align-items:flex-end;transform-origin:bottom"><div style="flex:1;height:' + b[0] + 'px;background:var(--qb-ui-primary);border-radius:2px 2px 0 0"></div><div style="flex:1;height:' + b[1] + 'px;background:var(--qb-ui-info);border-radius:2px 2px 0 0"></div></div>';
+      }).join('');
+      return AMZ_TOP + amzSub('‹ Finance', 'Cash flow', '12 months ▾') +
+        '<div style="flex:1;background:var(--qb-page-bg-secondary);padding:8px 12px;display:flex;flex-direction:column;gap:8px"><div style="background:#fff;border-radius:8px;padding:10px 12px;display:flex;flex-direction:column;gap:6px;border:1px solid var(--qb-divider-tertiary)"><div style="color:var(--qb-text-secondary)">Cash balance today</div><div class="wk-rise" style="font-weight:700;font-size:22px;line-height:1.1">$10,000.00</div><div style="display:flex;align-items:flex-end;gap:4px;height:100px;border-bottom:1px solid var(--qb-divider-tertiary);padding:6px 0 2px">' + barHtml + '</div><div style="display:flex;justify-content:space-between;color:var(--qb-text-secondary);font-size:8px"><span>May</span><span>Aug</span><span>Nov</span><span>Feb</span><span>Apr</span></div><div style="display:flex;gap:10px;font-size:8px;color:var(--qb-text-secondary)"><span style="display:flex;align-items:center;gap:4px"><span style="width:8px;height:8px;border-radius:2px;background:var(--qb-ui-primary)"></span>Money in</span><span style="display:flex;align-items:center;gap:4px"><span style="width:8px;height:8px;border-radius:2px;background:var(--qb-ui-info)"></span>Money out</span></div></div>' + ASSIST_CHIP_OPEN + '<span>Next Amazon payout lands <b style="font-weight:600">Apr 28</b>. You’re covered through May.</span></div></div>';
+    },
+    review: function () {
+      return AMZ_TOP + amzSub('‹ Back', 'Review · 8 to go', 'Skip') +
+        '<div style="flex:1;background:var(--qb-page-bg-secondary);padding:8px 12px;display:flex;flex-direction:column;gap:6px"><div style="background:#fff;border-radius:8px;padding:8px 12px;display:flex;flex-direction:column;gap:4px;border:1px solid var(--qb-divider-tertiary);box-shadow:0 2px 8px rgba(0,0,0,.2)"><div style="display:flex;flex-direction:column;gap:2px"><span style="color:var(--qb-text-secondary)">Apr 14 · Amazon settlement</span><span style="font-weight:700;font-size:16px;line-height:1.1">$1,444.38</span></div><div>One transfer, split by QuickBooks into:</div><div style="display:flex;flex-direction:column"><div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid var(--qb-divider-tertiary)"><span>Sales</span><span>$6,502.10</span></div><div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid var(--qb-divider-tertiary)"><span>Amazon fees</span><span>-$1,239.42</span></div><div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid var(--qb-divider-tertiary)"><span>Advertising</span><span>-$3,126.00</span></div><div style="display:flex;justify-content:space-between;padding:4px 0"><span>Reserve held</span><span>-$480.00</span></div></div>' + ASSIST_CHIP_OPEN + '<span>Matched to your Amazon statement, line for line.</span></div></div><div style="display:flex;gap:8px;margin-top:auto"><div style="flex:1;border:1px solid var(--qb-ui-primary);color:var(--qb-ui-primary);border-radius:4px;height:26px;display:flex;align-items:center;justify-content:center;font-weight:600">Edit split</div><div style="flex:1.3;background:var(--qb-action-standard);color:#fff;border-radius:4px;height:26px;display:flex;align-items:center;justify-content:center;font-weight:600">Looks right</div></div><div style="color:var(--qb-text-secondary);font-size:8px;text-align:center">Swipe right to accept · left to edit</div></div>';
+    },
+    tax: function () {
+      return AMZ_TOP + amzSub('‹ Finance', 'Tax estimate', 'Q2 ▾') +
+        '<div style="flex:1;background:var(--qb-page-bg-secondary);padding:8px 12px;display:flex;flex-direction:column;gap:6px"><div style="background:#fff;border-radius:8px;padding:8px 12px;display:flex;flex-direction:column;gap:4px;border:1px solid var(--qb-divider-tertiary)"><div style="color:var(--qb-text-secondary)">Estimated quarterly tax · due Jun 15</div><div class="wk-rise" style="font-weight:700;font-size:18px;line-height:1.1">$1,860.00</div><div style="display:flex;flex-direction:column;gap:4px;padding-top:2px"><div style="display:flex;justify-content:space-between"><span>Set aside so far</span><span style="font-weight:600">$1,200.00</span></div><div style="height:8px;background:var(--qb-page-bg-secondary);border-radius:4px"><div class="wk-x" style="width:64%;height:8px;background:var(--qb-ui-primary);border-radius:4px;transform-origin:left"></div></div></div></div><div style="background:#fff;border-radius:8px;padding:8px 12px;display:flex;flex-direction:column;gap:4px;border:1px solid var(--qb-divider-tertiary)"><div style="display:flex;justify-content:space-between;align-items:center;gap:8px;padding:4px 0;border-bottom:1px solid var(--qb-divider-tertiary)"><span>Sales tax collected by Amazon</span><span style="flex:none;display:inline-flex;align-items:center;padding:1px 6px;border-radius:4px;background:var(--qb-container-bg-positive);color:var(--qb-ui-positive);font-weight:600;font-size:7px;line-height:1.4;white-space:nowrap">Remitted</span></div><div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid var(--qb-divider-tertiary)"><span>Other channels sales tax</span><span>$412.00</span></div><div style="display:flex;justify-content:space-between;padding:4px 0"><span>Deductions found</span><span>$5,361.00</span></div></div>' + ASSIST_CHIP_OPEN + '<span>Move <b style="font-weight:600">$165.00 per payout</b> to hit the estimate by Jun 15.</span></div><div style="display:flex;margin-top:auto"><div style="flex:1;background:var(--qb-action-standard);color:#fff;border-radius:4px;height:26px;display:flex;align-items:center;justify-content:center;font-weight:600">Set aside automatically</div></div></div>';
+    }
+  };
+
+  /* ---------- static visuals ---------- */
+  function deskHTML(t) {
+    return '<div style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:' + t.muted + ';margin-top:auto;padding-top:14px">seller central payments · sales and fees, no cost of goods, no profit</div>' +
+      '<div class="shot a-s" style="width:100%;flex:none;margin-top:10px;background:#fff;border-radius:8px 8px 0 0;overflow:hidden;font-family:\'Amazon Ember\',Arial,Helvetica,sans-serif;font-size:8px;color:#0f1111;line-height:1.4">' +
+      '<div style="height:26px;background:#232f3e;color:#fff;display:flex;align-items:center;gap:12px;padding:0 12px"><span style="display:flex;flex-direction:column;line-height:1"><span style="font-weight:700;font-size:9px">amazon <span style="font-weight:400">seller central</span></span><svg width="22" height="5" viewBox="0 0 24 6" fill="none" stroke="#ff9900" stroke-width="1.6" stroke-linecap="round"><path d="M1 1.5c5 4 17 4 22 0"></path><path d="M20.5 1.2l2.5.3-1.4 2.1"></path></svg></span><span style="flex:1;height:14px;background:#fff;border-radius:2px;color:#777;display:flex;align-items:center;padding:0 6px;font-size:7px">Search</span><span style="font-size:7px;color:#ddd">EcoWave · United States</span></div>' +
+      '<div style="height:20px;background:#fff;border-bottom:1px solid #d5d9d9;display:flex;align-items:center;gap:12px;padding:0 12px;font-size:7px;color:#0f1111"><span>Catalog</span><span>Inventory</span><span>Orders</span><span>Advertising</span><span>Reports</span><span style="font-weight:700;border-bottom:2px solid #ff9900;padding:5px 0">Payments</span></div>' +
+      '<div style="padding:12px 12px 14px;background:#f3f3f3;display:flex;flex-direction:column;gap:8px"><div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font-weight:700;font-size:12px">Payments</span><span style="color:#007185;font-size:7px">Statement view · Apr 1 – Apr 14 ▾</span></div>' +
+      '<div style="display:grid;grid-template-columns:1.4fr 1fr;gap:8px;align-items:start"><div style="background:#fff;border:1px solid #d5d9d9;border-radius:4px;padding:8px 10px;display:flex;flex-direction:column"><div style="display:flex;justify-content:space-between;padding-bottom:4px"><span style="font-weight:700">Statement summary</span><span style="padding:1px 5px;border-radius:2px;background:#e7e7e7;font-size:6px;font-weight:700">Closed</span></div><div style="display:flex;justify-content:space-between;padding:5px 0;border-top:1px solid #e7e7e7"><span>Sales</span><span>$6,502.10</span></div><div style="display:flex;justify-content:space-between;padding:5px 0;border-top:1px solid #e7e7e7"><span>Refunds</span><span>-$212.30</span></div><div style="display:flex;justify-content:space-between;padding:5px 0;border-top:1px solid #e7e7e7"><span>Expenses</span><span>-$4,365.42</span></div><div style="display:flex;justify-content:space-between;padding:5px 0;border-top:1px solid #e7e7e7;font-weight:700"><span>Net proceeds</span><span>$1,444.38</span></div></div>' +
+      '<div style="display:flex;flex-direction:column;gap:8px"><div style="background:#fff;border:1px solid #d5d9d9;border-radius:4px;padding:8px 10px;display:flex;flex-direction:column;gap:2px"><span style="color:#565959">Transfer to bank</span><span style="font-weight:700;font-size:14px">$1,444.38</span><span style="color:#565959;font-size:7px">Initiated Apr 15 · 3–5 days</span></div></div></div></div></div>';
+  }
+
+  function loopHTML(t) {
+    var items = ['Name the fear first.', 'Design for next year, not last.', 'Listen for whether it works.', 'Fix what you built.', 'Move people toward what they’re good at.'];
+    return '<div class="a-s" style="display:flex;flex-direction:column;border-top:1px solid ' + t.rule + '">' + items.map(function (txt, i) {
+      var border = i < items.length - 1 ? 'border-bottom:1px solid ' + t.ruleSoft : '';
+      return '<div style="display:grid;grid-template-columns:34px 1fr;gap:10px;align-items:baseline;padding:11px 0;' + border + '"><span style="font-family:var(--font-serif);font-weight:600;font-size:26px;color:' + t.accent + '">' + (i + 1) + '</span><span style="font-size:16px;line-height:1.4">' + txt + '</span></div>';
+    }).join('') + '</div>';
+  }
+
+  function testsHTML(t) {
+    var items = [
+      ['Are the markets similar enough?', 'Customer needs, regulation, competition.'],
+      ['Is the offering mature enough to travel?', 'Own what is ready to scale, not what is still being invented.'],
+      ['Where does the cross-functional team sit?', 'Design should own work next to its PM and engineering partners.']
+    ];
+    return '<div class="a-s" style="display:flex;flex-direction:column;border-top:1px solid ' + t.rule + '">' + items.map(function (it, i) {
+      var border = i < items.length - 1 ? 'border-bottom:1px solid ' + t.ruleSoft : '';
+      return '<div style="display:grid;grid-template-columns:34px 1fr;gap:10px;align-items:baseline;padding:14px 0;' + border + '"><span style="font-family:var(--font-serif);font-weight:600;font-size:26px;color:' + t.accent + '">' + (i + 1) + '</span><span style="display:flex;flex-direction:column;gap:3px"><span style="font-size:16px;line-height:1.4">' + it[0] + '</span><span style="font-size:13px;line-height:1.5;color:' + t.noteColor + '">' + it[1] + '</span></span></div>';
+    }).join('') + '</div>';
+  }
+
+  function citiesHTML() {
+    var cells = [
+      ['color-mix(in oklch, var(--mustard) 45%, var(--cream))', 'fy21 to 23', 'Canada', 'built the loop'],
+      ['var(--band-sage)', 'fy24', 'Singapore', '8 of 8 retained'],
+      ['var(--tint-periwinkle)', 'fy25', 'New York', 'delivery sped up'],
+      ['var(--tint-blush)', 'fy26', 'Bangalore', 'rebuilt remotely']
+    ];
+    return '<div class="a-s" style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:6px">' + cells.map(function (c) {
+      return '<div style="background:' + c[0] + ';color:var(--ink);padding:16px 14px;display:flex;flex-direction:column;gap:4px"><span style="font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--caption-fg)">' + c[1] + '</span><span style="font-family:var(--font-display);font-weight:300;font-size:17px;letter-spacing:.08em;text-transform:uppercase">' + c[2] + '</span><span style="font-size:12px;color:var(--body-muted)">' + c[3] + '</span></div>';
+    }).join('') + '</div>';
+  }
+
+  /* ---------- screen builder ---------- */
+  function phoneFigure(v, i, o, zoom) {
+    var isCarousel = o.mode === 'carousel';
+    var pair = o.mode === 'crest' && o.phones.length > 1;
+    var w = pair ? '160px' : isCarousel ? '200px' : '220px';
+    var h = pair ? '320px' : isCarousel ? '400px' : '440px';
+    var mt = (i === 1 && !isCarousel) ? '36px' : '0';
+    var shadow = o.t === 'peri' ? 'var(--shadow-photo-pink)' : 'var(--shadow-block-mustard)';
+    var frameAnim = o.mode === 'crest' ? ' class="a-peek"' : '';
+    var cap = isCarousel ? '<figcaption style="flex:none;height:36px;padding-top:4px;box-sizing:content-box;font-size:13px;font-weight:600;line-height:1.4;text-align:center;color:' + THEMES[o.t].fg + '">' + o.caps[i] + '</figcaption>' : '';
+    return '<figure class="ph" style="margin:0;flex:none;scroll-snap-align:center;width:' + w + ';display:flex;flex-direction:column;align-items:center;gap:10px;margin-top:' + mt + ';zoom:' + zoom + ';transition:transform .12s">' +
+      '<div' + frameAnim + ' style="width:100%;height:' + h + ';padding:7px;border:1.5px solid var(--ink);border-radius:30px;background:var(--cream);box-shadow:' + shadow + '">' +
+      '<div style="position:relative;width:100%;height:100%;border-radius:23px;background:#fff;overflow:hidden;display:flex;flex-direction:column;font-size:9px;color:var(--qb-text-primary);font-family:var(--qb-font-family);line-height:1.35">' +
+      '<div style="height:24px;flex:none;display:flex;justify-content:space-between;align-items:center;padding:0 14px;font-size:8px;font-weight:600;background:#fff;color:var(--qb-text-primary)"><span>9:41</span><span>●●● ▮</span></div>' +
+      VARIANTS[v]() +
+      '</div></div>' + cap + '</figure>';
+  }
+
+  function screenHTML(o) {
+    var t = THEMES[o.t];
+    var phones = o.phones || [];
+    var isCarousel = o.mode === 'carousel';
+    var isCrest = o.mode === 'crest';
+    var justify = isCrest ? 'flex-end' : isCarousel ? 'flex-start' : 'center';
+    var pad = isCarousel ? '96px 24px 24px' : o.visual === 'desk' ? '96px 24px 0' : '96px 24px 96px';
+    var titleSize = o.big ? '34px' : '27px';
+    var html = '<section id="' + o.id + '" style="height:100%;scroll-snap-align:start;background:' + t.bg + ';color:' + t.fg + ';padding:' + pad + ';display:flex;flex-direction:column;justify-content:' + justify + ';gap:14px;overflow:hidden;position:relative">';
+    html += '<div class="a-e" style="font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:' + t.accent + '">' + o.eyebrow + '</div>';
+    html += '<h2 class="a-t" style="margin:0;font-family:var(--font-display);font-weight:300;font-size:' + titleSize + ';line-height:1.12;letter-spacing:.06em;text-transform:uppercase;text-shadow:' + t.titleShadow + ';text-wrap:pretty">' + o.title + '</h2>';
+    if (o.body) html += '<p class="a-b" style="margin:0;font-family:var(--font-serif);font-style:italic;font-size:22px;line-height:1.35;color:' + t.bodyColor + ';text-wrap:pretty">' + o.body + '</p>';
+    if (o.note) html += '<p class="a-n" style="margin:0;font-size:14px;line-height:1.55;color:' + t.noteColor + ';text-wrap:pretty">' + o.note + '</p>';
+    if (o.attr) html += '<div class="a-n" style="font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:' + t.muted + '">' + o.attr + '</div>';
+    if (o.stats && o.stats.length) {
+      html += '<div class="a-s" style="display:flex;flex-direction:column;border-top:1px solid ' + t.rule + ';margin-top:6px">' + o.stats.map(function (st) {
+        return '<div style="display:grid;grid-template-columns:110px 1fr;gap:14px;align-items:baseline;padding:16px 0;border-bottom:1px solid ' + t.ruleSoft + '"><span style="font-family:var(--font-serif);font-weight:600;font-size:36px;line-height:1;color:' + t.accent + ';white-space:nowrap">' + st.n + '</span><span style="font-size:15px;line-height:1.45">' + st.l + '</span></div>';
+      }).join('') + '</div>';
+    }
+    if (o.visual === 'img') {
+      html += '<img src="assets/p18-3-550.webp" alt="QuickBooks profitability and cash flow inside Amazon Seller Central" class="shot a-s" style="width:100%;margin-top:10px">';
+      html += '<div style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:' + t.muted + '">the web prototype both companies negotiated with</div>';
+    }
+    if (o.visual === 'desk') html += deskHTML(t);
+    if (o.visual === 'loop') html += loopHTML(t);
+    if (o.visual === 'tests') html += testsHTML(t);
+    if (o.visual === 'cities') html += citiesHTML();
+    if (isCarousel) {
+      html += '<div style="display:flex;justify-content:space-between;align-items:baseline;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:' + t.muted + '"><span id="fs-' + o.id + '">' + o.caps[0] + '</span><span id="fc-' + o.id + '" style="white-space:nowrap">01 / ' + String(phones.length).padStart(2, '0') + '</span></div>';
+    }
+    if (phones.length) {
+      var maxH = isCrest ? (o.phoneH || '40%') : 'none';
+      var margin = isCrest ? '6px -24px -96px' : '0 -24px';
+      var pPad = isCarousel ? '4px 24px 6px' : '0';
+      var pJustify = isCrest ? 'center' : 'flex-start';
+      var ox = isCarousel ? 'auto' : 'hidden';
+      var snap = isCarousel ? 'x mandatory' : 'none';
+      var ev = isCarousel ? 'auto' : 'none';
+      var animCls = isCarousel ? ' a-c' : '';
+      html += '<div class="m-snap' + animCls + '"' + (isCarousel ? ' data-flow="' + o.id + '"' : '') + ' style="flex:1;min-height:0;max-height:' + maxH + ';margin:' + margin + ';padding:' + pPad + ';display:flex;gap:16px;justify-content:' + pJustify + ';align-items:flex-start;overflow-x:' + ox + ';overflow-y:hidden;scroll-snap-type:' + snap + ';pointer-events:' + ev + '">' +
+        phones.map(function (v, i) { return phoneFigure(v, i, o, '1'); }).join('') + '</div>';
+    }
+    if (isCarousel) {
+      html += '<div id="fd-' + o.id + '" style="display:flex;justify-content:center;gap:8px">' + phones.map(function (_, k) {
+        return '<span style="width:8px;height:8px;border-radius:50%;background:' + (k === 0 ? t.accent : t.ruleSoft) + '"></span>';
+      }).join('') + '</div>';
+    }
+    html += '</section>';
+    return html;
+  }
+
+  /* ---------- render ---------- */
+  var scroller = document.getElementById('scroller');
+  var talk = document.getElementById('talk');
+  talk.insertAdjacentHTML('beforebegin', DATA.map(screenHTML).join(''));
+  var sections = Array.prototype.slice.call(scroller.children);
+
+  var supportsSDA = CSS.supports('animation-timeline: scroll()') && CSS.supports('scroll-timeline-name: --page');
+
+  /* ---------- top bar / navigation state ---------- */
+  var topbar = document.getElementById('topbar');
+  var talkBtn = document.getElementById('talkBtn');
+  var chRow = document.getElementById('chRow');
+  var chLabel = document.getElementById('chLabel');
+  var chCount = document.getElementById('chCount');
+  var segs = document.getElementById('segs');
+  var nextBtn = document.getElementById('nextBtn');
+  var idx = -1;
+  var curChapter = null;
+  var curOnDark = null;
+  var segFills = [];
+
+  function chapterAt(i) {
+    for (var c = CHAPTERS.length - 1; c >= 0; c--) if (i >= CHAPTERS[c].start) return CHAPTERS[c];
+    return CHAPTERS[0];
+  }
+
+  function pct(g) { return (Math.max(0, g) / (TOTAL - 1) * 100).toFixed(2) + '%'; }
+
+  function buildSegs(ch, fill, track) {
+    segs.innerHTML = '';
+    segFills = [];
+    for (var i = 0; i < ch.count; i++) {
+      var g = ch.start + i;
+      var outer = document.createElement('div');
+      outer.style.cssText = 'flex:1;height:3px;background:' + track + ';overflow:hidden';
+      var inner = document.createElement('div');
+      inner.style.cssText = 'height:3px;background:' + fill + ';transform-origin:left';
+      if (g === 0) {
+        /* home segment is always full */
+      } else if (supportsSDA) {
+        inner.style.animation = 'fillX linear both';
+        inner.style.animationTimeline = '--page';
+        inner.style.animationRange = pct(g - 1) + ' ' + pct(g);
+      } else {
+        inner.style.transform = 'scaleX(0)';
+      }
+      outer.appendChild(inner);
+      segs.appendChild(outer);
+      segFills.push({ el: inner, g: g });
+    }
+  }
+
+  function updateSegFallback() {
+    if (supportsSDA) return;
+    var max = scroller.scrollHeight - scroller.clientHeight;
+    var p = max > 0 ? scroller.scrollTop / max * (TOTAL - 1) : 0;
+    segFills.forEach(function (s) {
+      if (s.g === 0) return;
+      s.el.style.transform = 'scaleX(' + Math.max(0, Math.min(1, p - (s.g - 1))) + ')';
+    });
+  }
+
+  function updateBar() {
+    var ch = chapterAt(idx);
+    var scr = idx >= 1 && idx <= DATA.length ? DATA[idx - 1] : null;
+    var onDark = idx === 0 || ch.key === 'talk' || (scr && (scr.t === 'teal' || scr.t === 'dark'));
+    var bg = idx === 0 ? 'var(--teal)' : ch.key === 'talk' ? 'var(--band-dark)' : THEMES[scr.t].bg;
+    topbar.style.background = bg;
+    topbar.style.color = onDark ? 'var(--cream)' : 'var(--ink)';
+    talkBtn.style.color = onDark ? 'var(--pink)' : 'var(--terracotta)';
+    chRow.style.color = onDark ? 'rgba(249,246,239,.7)' : 'var(--caption-fg)';
+    chLabel.textContent = ch.label;
+    chCount.textContent = ch.count > 1 ? String(idx - ch.start + 1).padStart(2, '0') + ' / ' + String(ch.count).padStart(2, '0') : '';
+    if (ch !== curChapter || onDark !== curOnDark) {
+      buildSegs(ch, onDark ? 'var(--mustard)' : 'var(--terracotta)', onDark ? 'rgba(249,246,239,.3)' : 'rgba(20,52,46,.18)');
+      curChapter = ch;
+      curOnDark = onDark;
+    }
+    nextBtn.style.display = idx < TOTAL - 1 ? 'flex' : 'none';
+    nextBtn.style.background = onDark ? 'var(--cream)' : 'var(--ink)';
+    nextBtn.style.color = onDark ? 'var(--ink)' : 'var(--cream)';
+    nextBtn.style.borderColor = onDark ? 'var(--ink)' : 'var(--cream)';
+    sections.forEach(function (sec, i) { sec.classList.toggle('awake', i === idx); });
+  }
+
+  function goTo(i) { scroller.scrollTo({ top: i * scroller.clientHeight, behavior: 'smooth' }); }
+
+  scroller.addEventListener('scroll', function () {
+    var i = Math.round(scroller.scrollTop / scroller.clientHeight);
+    if (i !== idx) { idx = i; updateBar(); }
+    updateSegFallback();
+  }, { passive: true });
+
+  document.getElementById('homeBtn').addEventListener('click', function () { goTo(0); });
+  talkBtn.addEventListener('click', function () { goTo(TOTAL - 1); });
+  nextBtn.addEventListener('click', function () { goTo(Math.min(TOTAL - 1, idx + 1)); });
+
+  /* ---------- carousels ---------- */
+  DATA.filter(function (o) { return o.mode === 'carousel'; }).forEach(function (o) {
+    var el = scroller.querySelector('[data-flow="' + o.id + '"]');
+    var label = document.getElementById('fs-' + o.id);
+    var counter = document.getElementById('fc-' + o.id);
+    var dots = document.getElementById('fd-' + o.id).children;
+    var t = THEMES[o.t];
+    var fi = 0;
+    el.addEventListener('scroll', function () {
+      var fig = el.firstElementChild;
+      var step = fig ? fig.getBoundingClientRect().width + 16 : 216;
+      var i = Math.min(o.phones.length - 1, Math.round(el.scrollLeft / step));
+      if (i !== fi) {
+        fi = i;
+        label.textContent = o.caps[fi];
+        counter.textContent = String(fi + 1).padStart(2, '0') + ' / ' + String(o.phones.length).padStart(2, '0');
+        for (var k = 0; k < dots.length; k++) dots[k].style.background = k === fi ? t.accent : t.ruleSoft;
+      }
+    }, { passive: true });
+  });
+
+  /* ---------- carousel phone sizing ---------- */
+  function applyZoom() {
+    var vh = scroller.clientHeight || window.innerHeight;
+    var z = Math.max(0.5, Math.min(1, (vh - 330 - 46) / 400));
+    scroller.querySelectorAll('[data-flow] figure').forEach(function (f) { f.style.zoom = String(z); });
+  }
+  window.addEventListener('resize', function () { applyZoom(); updateSegFallback(); });
+
+  applyZoom();
+  idx = 0;
+  updateBar();
+})();
+</script>
+<script data-goatcounter="https://michicaprovato.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
