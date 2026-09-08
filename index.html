@@ -391,7 +391,7 @@ figure.ph:active{transform:scale(.97)}
     if (o.visual === 'tests') html += testsHTML(t);
     if (o.visual === 'cities') html += citiesHTML();
     if (isCarousel) {
-      html += '<div style="display:flex;justify-content:space-between;align-items:baseline;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:' + t.muted + '"><span id="fs-' + o.id + '">' + o.caps[0] + '</span><span id="fc-' + o.id + '" style="white-space:nowrap">01 / ' + String(phones.length).padStart(2, '0') + '</span></div>';
+      html += '<div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;min-height:33px;font-size:11px;line-height:1.5;letter-spacing:.18em;text-transform:uppercase;color:' + t.muted + '"><span id="fs-' + o.id + '">' + o.caps[0] + '</span><span id="fc-' + o.id + '" style="white-space:nowrap">01 / ' + String(phones.length).padStart(2, '0') + '</span></div>';
     }
     if (phones.length) {
       var maxH = isCrest ? (o.phoneH || '40%') : 'none';
