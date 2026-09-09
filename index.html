@@ -13,7 +13,7 @@
 :root{
   /* Mallorca tokens */
   --cream:#f9f6ef; --ink:#14342e; --body:#33453e; --body-muted:#4a5a54; --caption-fg:#7d8a83;
-  --terracotta:#c45f3f; --teal:#007e6c; --mustard:#d6d35f; --pink:#f29cc3;
+  --terracotta:#c45f3f; --teal:#007e6c; --mustard:#d6d35f; --pink:#f29cc3; --pink-bright:#fff0f7;
   --band-dark:#2f4a3c; --band-sage:#dce8dd;
   --tint-blush:#ffc0c0; --tint-periwinkle:#dcdff0; --tint-sand:#f2e4c9;
   --hairline:#e2dcc0;
@@ -110,7 +110,7 @@ figure.ph:active{transform:scale(.97)}
 
     <!-- HOME -->
     <section id="home" style="height:100%;scroll-snap-align:start;background:var(--teal);color:var(--cream);padding:96px 24px 90px;display:flex;flex-direction:column;justify-content:flex-end;gap:22px;overflow:hidden">
-      <div style="font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--pink);animation:fade .6s .1s both">design leader &middot; toronto</div>
+      <div style="font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--pink-bright);animation:fade .6s .1s both">design leader &middot; toronto</div>
       <div style="display:flex;flex-direction:column;gap:12px;font-family:var(--font-display);font-weight:300;font-size:29px;line-height:1.05;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap">
         <div style="position:relative;display:inline-block;width:max-content;animation:settleL 2.2s cubic-bezier(.1,.8,.15,1) .2s both"><span style="position:absolute;right:100%;padding-right:.6em;animation:ghostOut 2.2s .2s both">Design with intent. Design with intent.</span><span style="display:inline-block;animation:shadowTight .2s steps(1) 2.4s both">Design with intent.</span></div>
         <div style="position:relative;display:inline-block;width:max-content;color:var(--mustard);animation:settleR 2.6s cubic-bezier(.1,.8,.15,1) .2s both"><span style="display:inline-block;animation:shadowTight .2s steps(1) 2.8s both">Lead with heart.</span><span style="position:absolute;left:100%;padding-left:.6em;animation:ghostOut 2.6s .2s both">Lead with heart. Lead with heart.</span></div>
@@ -190,7 +190,7 @@ figure.ph:active{transform:scale(.97)}
   var TOTAL = 1 + DATA.length + 1;
 
   var THEMES = {
-    teal: { bg: 'var(--teal)', fg: 'var(--cream)', accent: 'var(--pink)', bodyColor: 'var(--on-dark)', noteColor: 'rgba(249,246,239,.8)', muted: 'rgba(249,246,239,.7)', rule: 'var(--cream)', ruleSoft: 'rgba(249,246,239,.3)', titleShadow: '2px 2px 0 rgba(20,52,46,.5)' },
+    teal: { bg: 'var(--teal)', fg: 'var(--cream)', accent: 'var(--pink-bright)', bodyColor: 'var(--on-dark)', noteColor: 'rgba(249,246,239,.8)', muted: 'rgba(249,246,239,.7)', rule: 'var(--cream)', ruleSoft: 'rgba(249,246,239,.3)', titleShadow: '2px 2px 0 rgba(20,52,46,.5)' },
     sage: { bg: 'var(--band-sage)', fg: 'var(--ink)', accent: 'var(--terracotta)', bodyColor: 'var(--ink)', noteColor: 'var(--body)', muted: 'var(--caption-fg)', rule: 'var(--ink)', ruleSoft: 'rgba(20,52,46,.2)', titleShadow: 'var(--shadow-offset-mustard)' },
     peri: { bg: 'var(--tint-periwinkle)', fg: 'var(--ink)', accent: 'var(--terracotta)', bodyColor: 'var(--ink)', noteColor: 'var(--body)', muted: 'var(--caption-fg)', rule: 'var(--ink)', ruleSoft: 'rgba(20,52,46,.2)', titleShadow: 'var(--shadow-offset-mustard)' },
     sand: { bg: 'var(--tint-sand)', fg: 'var(--ink)', accent: 'var(--terracotta)', bodyColor: 'var(--ink)', noteColor: 'var(--body)', muted: 'var(--caption-fg)', rule: 'var(--ink)', ruleSoft: 'rgba(20,52,46,.2)', titleShadow: 'var(--shadow-offset-mustard)' },
