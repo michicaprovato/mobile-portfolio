@@ -102,7 +102,7 @@ figure.ph:active{transform:scale(.97)}
     </div>
     <div id="segs" style="display:flex;gap:4px;padding:0 20px 10px"></div>
     <div style="display:flex;justify-content:space-between;padding:0 20px 10px;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(249,246,239,.7)" id="chRow">
-      <span id="chLabel">home</span><span id="chCount"></span>
+      <div id="chLabel" style="display:flex;align-items:center;gap:12px">home</div><span id="chCount"></span>
     </div>
   </div>
 
@@ -120,8 +120,8 @@ figure.ph:active{transform:scale(.97)}
         <div style="width:84px;height:4px;background:var(--mustard);box-shadow:5px 4px 0 var(--pink)"></div>
         <p style="margin:0;font-family:var(--font-serif);font-style:italic;font-size:20px;line-height:1.35;color:var(--on-dark)">Four stories. Five minutes. Made for the phone in your hand.</p>
       </div>
-      <div style="display:flex;align-items:center;border-top:1px solid rgba(249,246,239,.4);padding-top:14px;animation:fade .6s 3.7s both">
-        <span style="font-size:min(11px, 2.8vw);letter-spacing:.12em;text-transform:uppercase;color:var(--mustard);white-space:nowrap">01 alaska &middot; 02 amazon &middot; 03 leading &middot; 04 global</span>
+      <div style="display:flex;align-items:center;gap:8px;border-top:1px solid rgba(249,246,239,.4);padding-top:8px;font-size:min(11px, 2.8vw);letter-spacing:.12em;text-transform:uppercase;color:var(--mustard);white-space:nowrap;animation:fade .6s 3.7s both">
+        <button data-go="1" style="border:0;background:none;padding:8px 0;font:inherit;letter-spacing:inherit;text-transform:inherit;color:inherit;cursor:pointer">01 alaska</button><span>&middot;</span><button data-go="7" style="border:0;background:none;padding:8px 0;font:inherit;letter-spacing:inherit;text-transform:inherit;color:inherit;cursor:pointer">02 amazon</button><span>&middot;</span><button data-go="13" style="border:0;background:none;padding:8px 0;font:inherit;letter-spacing:inherit;text-transform:inherit;color:inherit;cursor:pointer">03 leading</button><span>&middot;</span><button data-go="20" style="border:0;background:none;padding:8px 0;font:inherit;letter-spacing:inherit;text-transform:inherit;color:inherit;cursor:pointer">04 global</button>
       </div>
     </section>
 
@@ -484,8 +484,19 @@ figure.ph:active{transform:scale(.97)}
     topbar.style.color = onDark ? 'var(--cream)' : 'var(--ink)';
     talkBtn.style.color = onDark ? 'var(--pink)' : 'var(--terracotta)';
     chRow.style.color = onDark ? 'rgba(249,246,239,.7)' : 'var(--caption-fg)';
-    chLabel.textContent = ch.label;
-    chCount.textContent = ch.count > 1 ? String(idx - ch.start + 1).padStart(2, '0') + ' / ' + String(ch.count).padStart(2, '0') : '';
+    if (idx === 0) {
+      chLabel.textContent = 'home';
+      chCount.textContent = '';
+    } else {
+      var accent = onDark ? 'var(--pink)' : 'var(--terracotta)';
+      var muted = onDark ? 'rgba(249,246,239,.7)' : 'var(--caption-fg)';
+      chLabel.innerHTML = CHAPTERS.slice(1, 5).map(function (c, i) {
+        var label = '0' + (i + 1) + ' ' + c.key;
+        var on = ch.key === c.key;
+        return '<button data-go="' + c.start + '" style="border:0;background:none;padding:4px 0;font:inherit;font-size:min(10px, 2.6vw);letter-spacing:.14em;text-transform:inherit;white-space:nowrap;cursor:pointer;color:' + (on ? accent : muted) + (on ? ';font-weight:600' : '') + '">' + label + '</button>';
+      }).join('');
+      chCount.textContent = '';
+    }
     if (ch !== curChapter || onDark !== curOnDark) {
       buildSegs(ch, onDark ? 'var(--mustard)' : 'var(--terracotta)', onDark ? 'rgba(249,246,239,.3)' : 'rgba(20,52,46,.18)');
       curChapter = ch;
@@ -507,6 +518,10 @@ figure.ph:active{transform:scale(.97)}
   }, { passive: true });
 
   document.getElementById('homeBtn').addEventListener('click', function () { goTo(0); });
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest ? e.target.closest('[data-go]') : null;
+    if (b) goTo(parseInt(b.getAttribute('data-go'), 10));
+  });
   talkBtn.addEventListener('click', function () { goTo(TOTAL - 1); });
   nextBtn.addEventListener('click', function () { goTo(Math.min(TOTAL - 1, idx + 1)); });
 
